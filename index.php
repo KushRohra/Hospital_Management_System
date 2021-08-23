@@ -30,7 +30,7 @@
                     </div>
                     <div align="left">
                         <label class="form-label" for="address">Address</label>
-                        <input type="text" class="form-control" placeholder="Patient No" id="address" name="address" size="3ppx" required>
+                        <input type="text" class="form-control" placeholder="Address" id="address" name="address" size="3ppx" required>
                     </div>
                     <br>
                     <div align="right">
@@ -62,7 +62,7 @@
     <script src="./compn/jquery.validate.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="./js/patient.js"></script>
 </body>
 
 </html>
