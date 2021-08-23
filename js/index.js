@@ -12,12 +12,12 @@ function addPatient() {
         var method = '';
 
         if (isNew == true) {
-            url = 'php/add_patient.php';
+            url = 'php/patient/add_patient.php';
             data = $('#formPatient').serialize();
             method = 'POST';
         }
         else {
-            url = 'php/edit_patient.php';
+            url = 'php/patient/edit_patient.php';
             data = $('#formPatient').serialize() + "&patient_id=" + patient_id;
             method = 'POST';
         }
@@ -32,7 +32,8 @@ function addPatient() {
                 if (isNew == true) {
                     alert("Patient Added");
                 } else {
-                    alert("Patient Updated")
+                    isNew = true;
+                    alert("Patient Updated");
                 }
                 getAllPatient();
                 resetForm();
@@ -51,7 +52,7 @@ function resetForm() {
 function getAllPatient() {
     $('#tbl_patient').dataTable().fnDestroy();
     $.ajax({
-        url: 'php/all_patient.php',
+        url: 'php/patient/all_patient.php',
         type: 'GET',
         dataType: 'JSON',
 
@@ -84,7 +85,7 @@ function getAllPatient() {
 function getPatientDetails(id) {
     $.ajax({
         type: 'POST',
-        url: 'php/patient_return.php',
+        url: 'php/patient/patient_return.php',
         dataType: 'JSON',
         data: {
             patient_id: id
@@ -102,7 +103,7 @@ function getPatientDetails(id) {
 function removePatientDetails(id) {
     $.ajax({
         type: 'POST',
-        url: 'php/delete_patient.php',
+        url: 'php/patient/delete_patient.php',
         dataType: 'JSON',
         data: {
             patient_id: id
