@@ -5,8 +5,8 @@
         </div>
         <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Patient</a></li>
-            <li><a href="#">Doctor</a></li>
+            <li><a href="#">View Prescription</a></li>
+            <li><a href="item.php">Create Item</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#"><span class="glyphicon glyphicon-user"> <?php echo $_SESSION['username']; ?></span></a></li>
