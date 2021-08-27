@@ -6,7 +6,7 @@
         <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="doctor.php">Add Doctor</a></li>
-            <li><a href="#">View Channels</a></li>
+            <li><a href="php/doctor/doctor_channel/view_channel.php">View Channels</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#"><span class="glyphicon glyphicon-user"> <?php echo $_SESSION['username']; ?></span></a></li>
