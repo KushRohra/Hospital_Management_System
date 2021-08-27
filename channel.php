@@ -22,41 +22,50 @@
         } else {
             include('./header/header_receptionist.php');
         }
-    ?> 
+    ?>
 
     <br>
 
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
-                <form action="" id="formPatient" class="card">
+                <form action="" id="formChannel" class="card">
                     <div class="left">
-                        <h3>Patient</h3>
+                        <h3>Channel</h3>
                     </div>
                     <div align="left">
-                        <label class="form-label" for="pname">Patient Name</label>
-                        <input type="text" class="form-control" placeholder="Patient Name" id="pname" name="pname" size="3ppx" required>
+                        <label class="form-label" for="doctor_no">Doctor Name</label>
+                        <select class="form-control" id="doctor_no" name="doctor_no">
+                            <option value="">Please Select a Doctor</option>
+                        </select>
                     </div>
                     <div align="left">
-                        <label class="form-label" for="phone">Phone</label>
-                        <input type="text" class="form-control" placeholder="Phone No" id="phone" name="phone" size="3ppx" required>
+                        <label class="form-label" for="patient_no">Patient Name</label>
+                        <select class="form-control" id="patient_no" name="patient_no">
+                            <option value="">Please Select a Patient</option>
+                        </select>
                     </div>
                     <div align="left">
-                        <label class="form-label" for="address">Address</label>
-                        <input type="text" class="form-control" placeholder="Address" id="address" name="address" size="3ppx" required>
+                        <label class="form-label" for="room_no">Room No</label>
+                        <input type="text" class="form-control" placeholder="Room No No" id="room_no" name="room_no" size="3ppx" required>
+                    </div>
+                    <div align="left">
+                        <label class="form-label" for="channel_date">Channel Date</label>
+                        <input type="date" class="form-control" placeholder="Channel Date" id="channel_date" name="channel_date" size="3ppx" required>
                     </div>
                     <br>
                     <div align="right">
-                        <button class="btn btn-info" type="button" id="save" onclick="addPatient()">Add</button>
+                        <button class="btn btn-info" type="button" id="save" onclick="addChannel()">Add</button>
                         <button class="btn btn-warning" type="button" id="reset" onclick="resetForm()">Reset</button>
                     </div>
                 </form>
             </div>
             <div class="col-sm-8">
                 <div class="panel-body">
-                    <table class="table table-responsive table-bordered" id="tbl_patient" cellpadding="0" width="100%">
+                    <table class="table table-responsive table-bordered" id="tbl_channel" cellpadding="0" width="100%">
                         <thead>
                             <tr>
+                                <th></th>
                                 <th></th>
                                 <th></th>
                                 <th></th>
@@ -75,7 +84,7 @@
     <script src="./compn/jquery.validate.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-    <script src="./js/patient.js"></script>
+    <script src="./js/channel.js"></script>
 </body>
 
 </html>
