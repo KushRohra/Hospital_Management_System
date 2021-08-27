@@ -1,4 +1,5 @@
 <?php  
+    session_start();
 
     $server_name = 'localhost';
     $username = 'root';
@@ -12,24 +13,18 @@
     }
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        session_start();
-
         $username = $_POST['username'];
         $password = md5($_POST['password']);
         $utype = $_POST['utype'];
 
-        $id;
+        $sql = "SELECT user_id, username, password, utype FROM user where username = '$username' AND password = '$password' and utype = '$utype'";
+        $result = mysqli_query($conn,$sql);
+        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-        $stmt = $conn->prepare('SELECT user_id, username, password, utype FROM user where username = ? AND password = ? and utype = ?');
-        $stmt->bind_param('sss', $username, $password, $utype);
-        $stmt->execute();
-        $stmt->store_result();
-        $stmt->bind_result($id, $username, $password, $utype);
-
-        if ($stmt->num_rows == 1) {
+        if (mysqli_num_rows($result) == 1) {
             $_SESSION['isLoggedIn'] = true;
             $_SESSION['utype'] = $utype;
-            $_SESSION['id'] = $id;
+            $_SESSION['id'] = $row['user_id'];
             $_SESSION['username'] = $username;
             echo 1;
         } else {

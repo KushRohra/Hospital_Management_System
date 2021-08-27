@@ -1,3 +1,11 @@
+<?php
+    session_start();
+
+    if (!$_SESSION['username']) {
+        header('Location: login.php');
+    } 
+?>
+
 <html>
 
 <head>
@@ -9,7 +17,13 @@
 <body>
 
     <?php
-    include('header.php')
+        if ($_SESSION['utype'] == 1) {
+            include('./header/header_pharmacist.php');
+        } else if ($_SESSION['utype'] == 2) {
+            include('./header/header_doctor.php');
+        } else {
+            include('./header/header_receptionist.php');
+        }
     ?>
 
     <br>
