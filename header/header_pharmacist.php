@@ -5,7 +5,7 @@
         </div>
         <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">View Prescription</a></li>
+            <li><a href="prescription.php">View Prescription</a></li>
             <li><a href="item.php">Create Item</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
