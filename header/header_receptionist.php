@@ -5,10 +5,8 @@
         </div>
         <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Patient</a></li>
-            <li><a href="#">Create Channel</a></li>
-            <li><a href="#">View Channels</a></li>
-            <li><a href="#">View Prescriptions</a></li>
+            <li><a href="patient.php">Patient</a></li>
+            <li><a href="channel.php">Create Channel</a></li>
             <li><a href="user.php">Create User</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">

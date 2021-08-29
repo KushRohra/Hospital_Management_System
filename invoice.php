@@ -50,10 +50,10 @@
                                 <input type="text" name="price" placeholder="Price" id="price" class="form-control" size="30px" required>
                             </td>
                             <td>
-                                <input type="number" name="quantity" placeholder="Quantity" id="quantity" class="form-control" size="30px" required>
+                                <input type="number" name="quantity" placeholder="Quantity" id="quantity" class="form-control" size="30px" min="0" required>
                             </td>
                             <td>
-                                <input type="text" name="amount" placeholder="Amount" id="amount" class="form-control" size="30px" required>
+                                <input type="text" name="total_price" placeholder="Total" id="total_price" class="form-control" size="30px" required>
                             </td>
                             <td>
                                 <button type="button" onclick="addItem()" class="btn btn-info">Add Item</button> 
@@ -84,16 +84,9 @@
                     <label for="total">Total</label>
                     <input type="text" class="form-control" placeholder="Total" name="total" id="total" size="30px">
                 </div>
-                <div class="form-group" align="left">
-                    <label for="pay">Pay</label>
-                    <input type="text" class="form-control" placeholder="Pay" name="pay" id="pay" size="30px">
-                </div><div class="form-group" align="left">
-                    <label for="balance">Balance</label>
-                    <input type="text" class="form-control" placeholder="Balance" name="balanace" id="balanace" size="30px">
-                </div>
                 <div class="form-group" align="right">
                     <button type="button" class="btn btn-success">Print</button>
-                    <button type="button" class="btn btn-warning">Reset</button>
+                    <button type="button" class="btn btn-warning" onclick="resetForm()">Reset</button>
                 </div>
             </div>
         </div>
@@ -103,7 +96,7 @@
     <script src="./compn/jquery.validate.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-    <script src="./js/patient.js"></script>
+    <script src="./js/invoice.js"></script>
 </body>
 
 </html>
